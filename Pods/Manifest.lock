@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.4.0)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
+  - SwiftyJSON (3.1.4)
+  - SWXMLHash (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - RxCocoa (= 3.0)
+  - RxSwift (= 3.0)
+  - SwiftyJSON
+  - SWXMLHash (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SWXMLHash: 6bbc0bf72975a18ceda469fb7d6a886a26d81694
+
+PODFILE CHECKSUM: 7f9e425fe2c23e5de011c7d80bb3501fb249d508
+
+COCOAPODS: 1.4.0
