@@ -32,6 +32,11 @@
 		87EB8635201406EE0059B012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87EB8633201406EE0059B012 /* LaunchScreen.storyboard */; };
 		87EB8640201406EE0059B012 /* sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB863F201406EE0059B012 /* sampleTests.swift */; };
 		87EB864B201406EE0059B012 /* sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB864A201406EE0059B012 /* sampleUITests.swift */; };
+		91A5EFB7201F033B0038CC5B /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5EFB6201F033B0038CC5B /* BaseRouter.swift */; };
+		91A5EFB9201F04100038CC5B /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A5EFB8201F04100038CC5B /* HomeView.xib */; };
+		91A5EFBB201F05E30038CC5B /* ProductsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A5EFBA201F05E30038CC5B /* ProductsView.xib */; };
+		91A5EFBD201F05F30038CC5B /* ProductsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5EFBC201F05F30038CC5B /* ProductsRouter.swift */; };
+		91A5EFBF201F06450038CC5B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5EFBE201F06450038CC5B /* ProductsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +87,11 @@
 		87EB8646201406EE0059B012 /* sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EB864A201406EE0059B012 /* sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleUITests.swift; sourceTree = "<group>"; };
 		87EB864C201406EE0059B012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A5EFB6201F033B0038CC5B /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		91A5EFB8201F04100038CC5B /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		91A5EFBA201F05E30038CC5B /* ProductsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsView.xib; sourceTree = "<group>"; };
+		91A5EFBC201F05F30038CC5B /* ProductsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRouter.swift; sourceTree = "<group>"; };
+		91A5EFBE201F06450038CC5B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		E4A2914A734FDDC516E5392D /* Pods_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52131D39CCEED245B593991 /* Pods-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-sample/Pods-sample.release.xcconfig"; sourceTree = "<group>"; };
 		F5DCDFB4829992F5F0C2761D /* Pods-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sample/Pods-sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +128,7 @@
 			children = (
 				87EB862A201406EE0059B012 /* AppDelegate.swift */,
 				87EB862C201406EE0059B012 /* ViewController.swift */,
+				91A5EFBE201F06450038CC5B /* ProductsViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 		87EB8629201406EE0059B012 /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				91A5EFB5201F032E0038CC5B /* Router */,
 				871F150220152D1500976CDD /* API */,
 				871F14FF20152CEC00976CDD /* Model */,
 				871F14FE20152CDC00976CDD /* UI */,
@@ -193,6 +205,8 @@
 				87EB8633201406EE0059B012 /* LaunchScreen.storyboard */,
 				87EB8636201406EE0059B012 /* Info.plist */,
 				871F1522201532B800976CDD /* Injectable.swift */,
+				91A5EFBA201F05E30038CC5B /* ProductsView.xib */,
+				91A5EFB8201F04100038CC5B /* HomeView.xib */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -222,6 +236,15 @@
 				F52131D39CCEED245B593991 /* Pods-sample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		91A5EFB5201F032E0038CC5B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				91A5EFB6201F033B0038CC5B /* BaseRouter.swift */,
+				91A5EFBC201F05F30038CC5B /* ProductsRouter.swift */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 		96EE80B925D4A20F12709C76 /* Frameworks */ = {
@@ -343,7 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87EB8635201406EE0059B012 /* LaunchScreen.storyboard in Resources */,
+				91A5EFB9201F04100038CC5B /* HomeView.xib in Resources */,
 				87EB8632201406EE0059B012 /* Assets.xcassets in Resources */,
+				91A5EFBB201F05E30038CC5B /* ProductsView.xib in Resources */,
 				87EB8630201406EE0059B012 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,12 +460,15 @@
 				87EB862D201406EE0059B012 /* ViewController.swift in Sources */,
 				871F150420152D2800976CDD /* OffersAPI.swift in Sources */,
 				871F150120152D0A00976CDD /* RequestOffer.swift in Sources */,
+				91A5EFBF201F06450038CC5B /* ProductsViewController.swift in Sources */,
 				871F151F20152E7B00976CDD /* Foundation.swift in Sources */,
 				871F151320152E0100976CDD /* Installment.swift in Sources */,
 				871F152120152E8D00976CDD /* Offer.swift in Sources */,
+				91A5EFB7201F033B0038CC5B /* BaseRouter.swift in Sources */,
 				871F151D20152E5900976CDD /* Pagination.swift in Sources */,
 				871F150F20152DD400976CDD /* Store.swift in Sources */,
 				871F151520152E1200976CDD /* Product.swift in Sources */,
+				91A5EFBD201F05F30038CC5B /* ProductsRouter.swift in Sources */,
 				871F151920152E3800976CDD /* Thumbnail.swift in Sources */,
 				871F150920152D8600976CDD /* JSONDecodable.swift in Sources */,
 				871F151120152DEB00976CDD /* Ebit.swift in Sources */,

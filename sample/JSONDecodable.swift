@@ -27,7 +27,6 @@ func decode<T:JSONDecodable>(data: NSData) -> [T]? {
         let objects: [T] = decode(dictionaries: dictionaries) else {
             return nil
     }
-    
     return objects
 }
 
