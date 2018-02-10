@@ -8,12 +8,16 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var appRouter:BaseRouter!
     var api = APIClient.getAPI()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        appRouter = BaseRouter()
         
         // Neste ponto o root view controller da janela já foi carregado. Assim, pode-se injetar, inicialmente, os dados necessários
         // nele.
@@ -24,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let rootController = window?.rootViewController {
             injectorAPI.inject(into: rootController, data: api)
         }
+        //Juntar com o appRouter.getRootView
         return true
     }
     
